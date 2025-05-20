@@ -1,0 +1,45 @@
+/* Container for the Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /*background-color: #34495e;  Navbar background color */
+    background-color: #1abc9c; /* Navbar background color */
+}
+
+/* Style for the logo images */
+.logo-image {
+    max-width: 160px;  /* Adjust the width */
+    height: auto;     /* Maintain the aspect ratio */
+}
+
+/* Additional styling for text or other elements can go here */
+.header-text {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.header-text h1 {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0; /* Remove extra margin */
+}
+
+.header-text p {
+    font-size: 1rem;
+    color: white;
+    margin-top: 5px; /* Add a small margin between the title and the paragraph */
+}
+
+/* Logo left and right adjustments */
+.logo-left,
+.logo-right {
+    flex-basis: 10%; /* Make sure the logos are centered and not too big */
+}
+
+/* Optional styling for the logo text and other navbar elements */
+.header-text h1,
+.header-text p {
+    font-family: 'Arial', sans-serif; /* Set font family */
+}

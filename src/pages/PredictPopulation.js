@@ -11,7 +11,8 @@ function PredictPopulation() {
         e.preventDefault();
         setError('');
         try {
-            const response = await axios.get(`${process.env.REACT_APP_API_URL}/predict/population?year=${year}`);
+            const response = await axios.get(`https://pfe-backend-pe9b.onrender.com/predict/population?year=${year}`);
+
             setPopulation(response.data.predicted_population);
         } catch (error) {
             setError('Error fetching Population prediction');

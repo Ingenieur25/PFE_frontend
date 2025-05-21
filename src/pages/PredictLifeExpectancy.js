@@ -11,7 +11,8 @@ function PredictLifeExpectancy() {
         e.preventDefault();
         setError('');
         try {
-            const response = await axios.get(`${process.env.REACT_APP_API_URL}/predict/life_expectancy?year=${year}`);
+           const response = await axios.get(`https://pfe-backend-pe9b.onrender.com/predict/life_expectancy?year=${year}`);
+
 
             setLifeExpectancy(response.data.predicted_life_expectancy);
         } catch (error) {

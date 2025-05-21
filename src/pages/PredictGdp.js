@@ -11,7 +11,7 @@ function PredictGdp() {
         e.preventDefault();
         setError('');  // Clear previous error messages
         try {
-            const response = await axios.get(`http://127.0.0.1:5000/predict/gdp?year=${year}`);
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/predict/gdp?year=${year}`);
             console.log("Response:", response.data);  // Log the response data for debugging
             setGdp(response.data.predicted_gdp); // Update the GDP state with the response
         } catch (error) {

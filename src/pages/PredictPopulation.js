@@ -11,7 +11,7 @@ function PredictPopulation() {
         e.preventDefault();
         setError('');
         try {
-            const response = await axios.get(`http://127.0.0.1:5000/predict/population?year=${year}`);
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/predict/population?year=${year}`);
             setPopulation(response.data.predicted_population);
         } catch (error) {
             setError('Error fetching Population prediction');
